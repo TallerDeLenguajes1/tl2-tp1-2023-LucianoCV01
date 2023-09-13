@@ -43,8 +43,5 @@ namespace EspacioCadete
         public void AgregarPedido(Pedido p){
             Pedidos?.Add(p);
         }
-        // public Pedido BuscarPedido(int id){
-
-        // }
     }
 }
