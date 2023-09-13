@@ -9,25 +9,18 @@ namespace EspacioCliente
         string? datosReferenciaDireccion;
 
         //Propiedades
-        public string? Nombre { get => nombre; set => nombre = value; }
-        public string? Direccion { get => direccion; set => direccion = value; }
-        public int Telefono { get => telefono; set => telefono = value; }
-        public string? DatosReferenciaDireccion { get => datosReferenciaDireccion; set => datosReferenciaDireccion = value; }
+        public string? Nombre { get => nombre;  }
+        public string? Direccion { get => direccion; }
+        public int Telefono { get => telefono;  }
+        public string? DatosReferenciaDireccion { get => datosReferenciaDireccion;  }
         
         // Constructores
-        public Cliente()
-        {
-            Nombre = null;
-            Direccion = null;
-            Telefono = 0;
-            DatosReferenciaDireccion = null;
-        }
         public Cliente(string nombre, string direccion, int telefono, string datosReferenciaDireccion)
         {
-            this.Nombre = nombre;
-            this.Direccion = direccion;
-            this.Telefono = telefono;
-            this.DatosReferenciaDireccion = datosReferenciaDireccion;
+            this.nombre = nombre;
+            this.direccion = direccion;
+            this.telefono = telefono;
+            this.datosReferenciaDireccion = datosReferenciaDireccion;
         }
     }
 }

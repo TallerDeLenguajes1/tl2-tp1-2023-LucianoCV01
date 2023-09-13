@@ -13,16 +13,13 @@ namespace EspacioCadete
         List<Pedido>? pedidos;
 
         // Propiedades
-        public int Id { get => id; set => id = value; }
-        public string? Nombre { get => nombre; set => nombre = value; }
-        public string? Direccion { get => direccion; set => direccion = value; }
-        public int Telefono { get => telefono; set => telefono = value; }
+        public int Id { get => id; }
+        public string? Nombre { get => nombre; }
+        public string? Direccion { get => direccion; }
+        public int Telefono { get => telefono; }
         public List<Pedido>? Pedidos { get => pedidos; set => pedidos = value; }
 
         // Constructores
-        public Cadete(){
-
-        }
         public Cadete(int id, string? nombre, string? direccion, int telefono, List<Pedido> pedidos)
         {
             this.id = id;
@@ -42,6 +39,18 @@ namespace EspacioCadete
             {
                 return error;
             }
+        }
+        public List<Cadete> ConversorDeCadete(List<string[]> Filas,List<Pedido> pedidos)
+        {
+
+            List<Cadete> MisCadetes = new List<Cadete>();
+            foreach (string[] filas in Filas)
+            {
+                Cadete cad = new Cadete(Convert.ToInt32(filas[0]), filas[1], filas[2],Convert.ToInt32(filas[3]), pedidos);
+                MisCadetes.Add(cad);
+            }
+            return MisCadetes;
+
         }
     }
 }
