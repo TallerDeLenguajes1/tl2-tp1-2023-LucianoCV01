@@ -77,4 +77,3 @@ namespace EspacioCadeteria
         }
     }
 }
-// d) reasignar el pedido a otro cadete.

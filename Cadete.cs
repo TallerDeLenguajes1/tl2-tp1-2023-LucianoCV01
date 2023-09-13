@@ -4,7 +4,7 @@ namespace EspacioCadete
     public class Cadete
     {
         public const int pagoPorPedido = 500;
-        public const float error = -9999;
+        public const int error = -9999;
         // Atributos
         int id;
         string? nombre;
@@ -30,15 +30,17 @@ namespace EspacioCadete
         }
 
         //Metodos
-        public float JornalACobrar(){
+        public int EnviosEntregados(){
+            int cantidadEnvios = error;
             if (pedidos != null)
             {
                 var pedidosEntregados = pedidos.Where(p => p.Estado == Estado.Entregado);
-                return pagoPorPedido * pedidosEntregados.Count();
-            } else
-            {
-                return error;
+                cantidadEnvios = pedidosEntregados.Count();
             }
+            return cantidadEnvios;
+        }
+        public float JornalACobrar(){
+            return pagoPorPedido * EnviosEntregados();
         }
         public void AgregarPedido(Pedido p){
             Pedidos?.Add(p);
