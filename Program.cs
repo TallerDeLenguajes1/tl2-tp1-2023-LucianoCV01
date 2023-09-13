@@ -11,13 +11,8 @@ internal class Program
         const string rutaDeArchivo = "/Users/lucianocosentino/Documents/Repositorios/TallerII/tl2-tp1-2023-LucianoCV01/";
         HelperCsv help = new();
         List<string[]> LecturaDeCadetes = help.LeerCsv(rutaDeArchivo, archivoCadetes, ',');
-        List<Cadete> MisCadetes = Cadete.ConversorDeContacto(LecturaDeCadetes, );  
+        List<Cadete> MisCadetes = help.ConversorDeCadete(LecturaDeCadetes);  
         List<string[]> LecturaDeCadeteria = help.LeerCsv(rutaDeArchivo, archivoCadeteria, ',');
-        Cadeteria cadeteria = Contacto.ConversorDeContacto(LecturaDelArchivo);  
+        Cadeteria cadeteria = help.ConversorDeCadeteria(LecturaDeCadeteria, MisCadetes);  
     }
 }
-            // string nombreDeArchivo = "MiArchivoCsv.csv";
-            // string rutaDeArchivo = @"C:\Users\javie\Documents\Pruebas\";
-
-            // List<string[]> LecturaDelArchivo = HelperCsv.LeerCsv(rutaDeArchivo, nombreDeArchivo, ';');
-            // List<Contacto> MisContactos = Contacto.ConversorDeContacto(LecturaDelArchivo);  
