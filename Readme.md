@@ -7,11 +7,17 @@ Por agregación, la relación entre Pedido y Cadete, el cadete tiene un pedido y
 
 - ¿Qué métodos considera que debería tener la clase Cadetería y la clase Cadete?
 
-
+Cadete: agregarPedido, buscarPedido.
+Cadeteria: crearPedido.
 
 - Teniendo en cuenta los principios de abstracción y ocultamiento, que atributos, propiedades y métodos deberían ser públicos y cuáles privados.
 
 Todos los atributos serían privados.
 
 - ¿Cómo diseñaría los constructores de cada una de las clases?
+
+Con sobrecarga de datos.
+
 - ¿Se le ocurre otra forma que podría haberse realizado el diseño de clases?    
+
+Crear una relación de agregación entre cliente y pedido.

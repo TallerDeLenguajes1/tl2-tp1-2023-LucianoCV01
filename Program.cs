@@ -1,5 +1,6 @@
 ﻿using EspacioCadeteria;
 using EspacioCadete;
+using EspacioPedido;
 using LectorCSV;
 internal class Program
 {
@@ -14,5 +15,18 @@ internal class Program
         List<Cadete> MisCadetes = help.ConversorDeCadete(LecturaDeCadetes);  
         List<string[]> LecturaDeCadeteria = help.LeerCsv(rutaDeArchivo, archivoCadeteria, ',');
         Cadeteria cadeteria = help.ConversorDeCadeteria(LecturaDeCadeteria, MisCadetes);  
+
+        string? opcion;
+        do
+        {
+            Console.WriteLine("------ Menu ------");
+            Console.WriteLine("1. Dar de Alta Pedido");
+            Console.WriteLine("2. Asignar Pedido a Cadete");
+            Console.WriteLine("3. Cambiar de Estado un Pedido");
+            Console.WriteLine("4. Reasignar un Pedido a otro Cadete");
+            Console.WriteLine("5. Mostrar Informe");
+            Console.WriteLine("6. Salir");
+            opcion = Console.ReadLine();
+        } while (opcion != "6");
     }
 }
