@@ -1,3 +1,4 @@
+using EspacioCadete;
 using EspacioCliente;
 namespace EspacioPedido
 {
@@ -8,20 +9,23 @@ namespace EspacioPedido
         string? observacion;
         Cliente? cliente;
         Estado estado;
+        Cadete? cadete;
 
         // Propiedades
         public int Numero { get => numero; }
         public string? Observacion { get => observacion; set => observacion = value; }
         public Cliente? Cliente { get => cliente; }   
         internal Estado Estado { get => estado; set => estado = value; }
+        public Cadete? Cadete { get => cadete; set => cadete = value; }
 
         // Constructores
-        public Pedido(int numero, string observacion, Estado estado, string nombre, string direccion, int telefono, string datosReferenciaDireccion)
+        public Pedido(int numero, string observacion, Estado estado, Cadete? cadete , string nombre, string direccion, int telefono, string datosReferenciaDireccion)
         {
             this.numero = numero;
             this.observacion = observacion;
             cliente = new(nombre, direccion, telefono, datosReferenciaDireccion);
             this.estado = estado;
+            this.Cadete = cadete;
         }
 
         // Metodos
